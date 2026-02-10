@@ -29,9 +29,14 @@ body {
     color: #fff;
     margin-left: 20px;
     text-decoration: none;
+    font-weight: 500;
 }
 
-/* HERO */
+.navbar nav a:hover {
+    color: #ff9800;
+}
+
+/* HERO SECTION */
 .hero {
     text-align: center;
     padding: 80px 20px;
@@ -39,14 +44,29 @@ body {
     color: white;
 }
 
+.hero h1 {
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 16px;
+}
+
+/* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 20px;
     background: #ff9800;
     color: #000;
-    padding: 10px 20px;
+    padding: 10px 22px;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #e68900;
+    cursor: pointer;
 }
 
 /* CATEGORIES */
@@ -63,41 +83,98 @@ body {
     width: 200px;
     text-align: center;
     border-radius: 5px;
+    transition: 0.3s ease;
 }
 
-/* WHY */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* WHY SECTION */
 .why {
     background: #fff;
     padding: 40px;
     text-align: center;
 }
 
-/* FEATURED */
+.why h2 {
+    margin-bottom: 15px;
+}
+
+.why ul {
+    list-style: none;
+}
+
+.why li {
+    margin: 8px 0;
+}
+
+/* FEATURED PRODUCT */
 .featured {
     padding: 40px;
     text-align: center;
 }
 
-/* PRODUCT */
+.product-card {
+    background: #fff;
+    padding: 30px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* PRODUCT PAGE */
 .product {
     padding: 40px;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
+}
+
+.product h1 {
+    margin-bottom: 20px;
 }
 
 .highlights li {
     margin: 10px 0;
 }
 
+/* IMAGE GALLERY */
+.gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: 200px;
+    border-radius: 6px;
+    background: #fff;
+    padding: 10px;
+}
+
+/* TABLE */
 table {
     width: 100%;
     margin: 20px 0;
     border-collapse: collapse;
+    background: #fff;
 }
 
 table, th, td {
     border: 1px solid #ccc;
+}
+
+th, td {
     padding: 10px;
+    text-align: left;
 }
 
 /* FOOTER */
@@ -109,34 +186,14 @@ footer {
     margin-top: 40px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
     .categories {
         flex-direction: column;
         align-items: center;
     }
-}
-.gallery {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
 
-.gallery img {
-    width: 200px;
-    border-radius: 5px;
-}
-
-.card:hover,
-.product-card:hover {
-    transform: translateY(-5px);
-    transition: 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-.btn:hover {
-    background-color: #e68900;
-    cursor: pointer;
+    .gallery img {
+        width: 100%;
+        max-width: 280px;
+    }
 }
